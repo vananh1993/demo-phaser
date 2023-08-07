@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body, html{
+            margin : 0;
+        }
+    </style>
+    <link rel="stylesheet" href="/assets/css/style.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div id="phaser-bobby" size-w = "900" sie-h = "900"></div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    setTimeout(function(){
+        window.game.init();
+    }, 1000);
+});
+</script>
+</body>
+</html>

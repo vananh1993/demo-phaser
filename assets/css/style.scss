@@ -1,0 +1,43 @@
+@mixin font-face($src, $font-family ,$font-weight : normal, $font-style : normal){
+    font-family: $font-family;
+    src: url('#{$src}.eot');
+    src: url('#{$src}.eot?#iefix') format('embedded-opentype'),
+    url('#{$src}.woff2') format('woff2'),
+    url('#{$src}.woff') format('woff'),
+    url('#{$src}.ttf') format('truetype'),
+    url('#{$src}.svg#SimSun') format('svg');
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+@font-face {
+    @include font-face('../fonts/ProximaNovaBold', 'ProximaNovaBold');
+}
+
+#phaser-example{
+    font-family: 'ProximaNovaBold';
+    width: 900px;
+    height : 900px;
+    position: absolute;
+    margin: auto;
+    top : 0;
+    left : 0;
+    bottom : 0;
+    right : 0;
+}
+.wrapper{
+    //max-width: 495px;
+    @media screen and (max-width: 1140px){
+        max-width: 1024px;
+    }
+    @media screen and (max-width: 900px){
+        max-width: 900px;
+    }
+    max-width: 900px;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+body{
+    background : url('../images/background/bg.jpg') no-repeat center;
+    background-size: cover;
+}
